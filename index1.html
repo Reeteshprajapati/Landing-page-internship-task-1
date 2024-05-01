@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn {
+    padding: 20px;
+    background: #7d2ae8;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 8px;
+    box-shadow: 0 0 40px #7d2ae8;
+    font-size: 32px;
+    color: #fff;
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: absolute;
+    top: 300px;
+    left: 60px;
+}
+.btn1 {
+    padding: 20px ;
+    background: #6625bb;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 8px;
+    box-shadow: 0 0 40px #7d2ae8;
+    font-size: 32px;
+    color: #fff;
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: absolute;
+    top: 300px;
+    left: 600px;
+    /* margin-top: 240px;
+    margin-left: 240px; */
+}
+    </style>
+</head>
+<body>
+    <!-- <button onclick="colorchange()"> click cognifyz website</button> -->
+    <!-- <button class="btn" onclick="changebodybg('red');"> on click</button> -->
+    <button class="btn">hello reetesh click me</button>
+    <input class="btn1" value="Show Time" onclick="show_now();">
+<div id=display></div>
+</body>
+<script>
+   const btn = document.querySelector('.btn');
+btn.addEventListener('click', () => {
+    btn.style.backgroundColor = 'green';
+    btn.style.boxShadow = '0 0 40px green';
+    btn.style.transition = '.5s ease';
+});
+    
+
+function show_now() { 
+var my_time = new Date();
+document.getElementById('display').innerHTML=my_time
+}
+
+
+
+const operator = prompt('Enter operator ( either +, -, * or / ): ');
+
+// take the operand input
+const number1 = parseFloat(prompt('Enter first number: '));
+const number2 = parseFloat(prompt('Enter second number: '));
+
+let result;
+
+// using if...else if... else
+if (operator == '+') {
+    result = number1 + number2;
+}
+else if (operator == '-') {
+    result = number1 - number2;
+}
+else if (operator == '*') {
+    result = number1 * number2;
+}
+else {
+    result = number1 / number2;
+}
+
+// display the result
+document.write(`${number1} ${operator} ${number2} = ${result}`);
+  </script>
+
+
+</html>
